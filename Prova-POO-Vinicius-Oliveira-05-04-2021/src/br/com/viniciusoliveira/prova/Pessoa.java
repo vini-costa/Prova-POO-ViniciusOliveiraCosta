@@ -2,10 +2,22 @@ package br.com.viniciusoliveira.prova;
 
 public class Pessoa {
 
+	//atributos
 	private String nome;
 	private String sobrenome;
+
 	
+	//Construtores
+	Pessoa(){
+		
+	}
 	
+	Pessoa(String nome, String sobrenome){
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+	}
+	
+	//metodos
 	public String getNome() {
 		return nome;
 	}
@@ -19,18 +31,13 @@ public class Pessoa {
 		this.sobrenome = sobrenome;
 	}
 	
-	
-	
-	//crianto este metodo
-	public String getNomeCompleto() {
-		
-		String nomeCompleto;
-		
-		
-		nomeCompleto = "a";
-		System.out.println();
-		
-		return nomeCompleto; 
+	public String toString() {
+		String nomeCompleto = this.nome + " " + this.sobrenome;
+		return nomeCompleto;
 	}
 	
+	public String getNomeCompleto() {
+		return toString(); 
+	}
+		
 }
